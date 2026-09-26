@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b1326">
+  <title>ZameenIQ · Real Estate CRM</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div id="login-screen" class="login-screen" hidden>
+    <div class="login-visual">
+      <div class="login-brand"><span class="brand-mark">Z</span><span><b>ZameenIQ</b><small>PRIVATE REAL ESTATE CRM</small></span></div>
+      <div class="login-copy"><span class="eyebrow">YOUR PROPERTY WORKSPACE</span><h1>Good decisions<br><em>start with a clear view.</em></h1><p>Keep leads, property, and every next step in one calm, focused space.</p>
+        <div class="login-stat-row"><div><b>01</b><span>One private workspace</span></div><div><b>02</b><span>Two access levels</span></div></div>
+      </div>
+      <div class="login-visual-foot"><span class="online-dot"></span> LOCAL WORKSPACE <span>·</span> YOUR DATA STAYS ON THIS DEVICE</div>
+    </div>
+    <div class="login-panel"><div class="login-form-wrap">
+      <div class="mobile-brand login-brand"><span class="brand-mark">Z</span><span><b>ZameenIQ</b><small>PRIVATE REAL ESTATE CRM</small></span></div>
+      <div class="login-heading"><span class="eyebrow">WELCOME BACK</span><h2>Sign in to your workspace</h2><p id="login-notice">Your private workspace for property leads, inventory, and follow-ups.</p></div>
+      <form id="login-form" class="form-stack">
+        <label>Username<input name="username" autocomplete="username" required autofocus placeholder="Enter your username"></label>
+        <label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="Enter your password"></label>
+        <div id="login-error" class="form-error" role="alert" hidden></div>
+        <button class="button button-primary button-wide" type="submit">Sign in <span aria-hidden="true">→</span></button>
+      </form>
+      <div class="login-help"><span class="tiny-lock">◇</span> Private, local sign-in <span class="muted">·</span> Admin controls user access</div>
+      <p class="login-panel-footnote">First-time sign-in details are in <b>README.md</b>. Change starter passwords after signing in.</p>
+    </div><div class="login-panel-foot">ZameenIQ <span>·</span> Designed for personal use</div></div>
+  </div>
+
+  <div id="app-shell" class="app-shell" hidden>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-top">
+        <a class="brand" href="#dashboard" aria-label="ZameenIQ dashboard"><span class="brand-mark">Z</span><span class="brand-words"><b>ZameenIQ</b><small>REAL ESTATE CRM</small></span></a>
+        <button id="sidebar-close" class="icon-button sidebar-close" aria-label="Close menu">×</button>
+        <div class="workspace-chip"><span class="workspace-glyph">⌂</span><span><b>My workspace</b><small>Personal portfolio</small></span><span class="chevron">⌄</span></div>
+        <div class="nav-label">WORKSPACE</div>
+        <nav id="navigation" class="navigation" aria-label="Main navigation"></nav>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="privacy-card"><span class="privacy-mark">✦</span><div><b>Private workspace</b><span>Saved on this device</span></div><span class="privacy-status"></span></div>
+        <div class="side-profile"><div class="avatar avatar-green" id="side-avatar">S</div><div class="side-profile-copy"><b id="side-name">Signed in</b><span id="side-role">User</span></div><button class="icon-button profile-trigger" data-action="profile" aria-label="Open account menu">···</button></div>
+      </div>
+    </aside>
+    <div class="main-frame">
+      <header class="topbar">
+        <button id="menu-toggle" class="icon-button menu-toggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumbs"><span>Workspace</span><i>/</i><b id="crumb-current">Dashboard</b></div>
+        <div class="topbar-actions"><label class="global-search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="Search this section"><kbd>⌘ K</kbd></label><button class="button button-quiet top-add" data-action="quick-add"><span class="plus">+</span> Quick add</button><div class="top-divider"></div><button class="icon-button profile-trigger top-profile" data-action="profile" aria-label="Open account menu"><span class="avatar avatar-small" id="top-avatar">S</span></button></div>
+        <div id="profile-menu" class="profile-menu" hidden></div>
+      </header>
+      <main id="main-content" class="main-content" tabindex="-1"></main>
+      <footer class="app-footer"><span><span class="online-dot"></span> LOCAL DATABASE ACTIVE</span><span>Made for your workspace <i>·</i> ZameenIQ</span></footer>
+    </div>
+  </div>
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <div id="modal-root"></div>
+</body>
+</html>
